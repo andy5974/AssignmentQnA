@@ -9,7 +9,6 @@ Using the secret name prod/cart-service/credentials, derive a sensible ARN as th
 
 ```python
 ```{
-```
   "Version": "2012-10-17",
   "Statement": [
     {
