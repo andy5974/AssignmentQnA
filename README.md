@@ -1,4 +1,4 @@
-# Assignment 2.14 and 2.15 and 2.16
+# Assignment 2.14
 
 Answer the following:
 - Does SNS guarantee exactly once delivery to subscribers?
@@ -13,7 +13,7 @@ Answer the following:
 
 ```you can use Amazon CloudWatch Alarms in combination with Amazon SNS```
 
-
+# Assignment 2.15
 Answer the following:
 What is needed to authorize your EC2 to retrieve secrets from the AWS Secret Manager?
 
@@ -35,9 +35,9 @@ Using the secret name prod/cart-service/credentials, derive a sensible ARN as th
   ]
 }
 ```
-
+# Assignment 2.16
 Requirements:
-Given the Lambda function and metric filters created in the activity, use terraform to create the alarm. Create a public github repository that has a terraform code, containing the answer to the above. Submission is the url to your public github repository.
+- Given the Lambda function and metric filters created in the activity, use terraform to create the alarm. Create a public github repository that has a terraform code, containing the answer to the above. Submission is the url to your public github repository.
 
 ````python
 {resource "aws_cloudwatch_metric_alarm" "cloudwatch_alarm" { alarm_name = "wx-info-count-breach" comparison_operator = "GreaterThanThreshold" evaluation_periods = 1 metric_name = "info-count" namespace = "/moviedb-api/wx" period = 60 statistic = "Sum" threshold = 10 alarm_description = " " actions_enabled = "true" alarm_actions = [aws_sns_topic.topic.arn] }
